@@ -13,3 +13,17 @@ body {
 
 	color: #5F9F09;
 }
+
+
+.span12{
+	width: 860px;
+}
+.col-md-1{
+	float: left;
+	width: 300px;
+}
+
+.col-md-2{
+	float: left;
+	width: 500px;
+}
