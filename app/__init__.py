@@ -14,12 +14,12 @@ app.config.from_object('config')
 app.jinja_env.filters["substitute"] = lambda s: regex_replace(s)
 app.jinja_env.filters["addlinks"] = addlinks
 
-def addlinks(text):
-    from flask import Markup
-    idlist = getallissueids()
-    for issueid in idlist:
-        text = text.replace( issueid, "<a href=/browse/" + issueid +">" + issueid + "</a>")
-    return Markup(text)
+#def addlinks(text):
+#    from flask import Markup
+#    idlist = getallissueids()
+#    for issueid in idlist:
+#        text = text.replace( issueid, "<a href=/browse/" + issueid +">" + issueid + "</a>")
+#    return Markup(text)
 
 def regex_replace(text):
     
