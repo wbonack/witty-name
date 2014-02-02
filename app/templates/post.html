@@ -7,9 +7,9 @@
             {% endautoescape %}
             <p><strong><span id="post{{post.id}}">
             {{post.body}}</br></br>
-            {% text = post.body %}
+            {#{% set text = post.body %}#}
             {% for u in users %}
-            {% text | replace("@" + u.nickname, "TESTING")%}
+            {#{% set text = replace("@" + u.nickname, "TESTING") %}#}
             {% endfor %}
             {{text}}
             </span></strong></p>
