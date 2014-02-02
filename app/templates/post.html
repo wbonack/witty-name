@@ -9,7 +9,7 @@
             {{post.body}}</br></br>
             {% set post_body = post.body %}
             {% for u in users %}
-                {% set post_body = post_body | replace("@" + u.nickname, "TESTING") %}
+                {% set post_body = post_body | replace("@" + u.nickname, '<a href="%s">@%s</a>' % (url_for('user', nickname = u.nickname), u.nickname)) %}
                     {% if loop.last %}
                         {{post_body}}
                     {% endif %}
