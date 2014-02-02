@@ -9,7 +9,7 @@
             {{post.body}}</br></br>
             {#{{post.body | substitute}}#}
             {% for u in users %}
-            {{u}}
+            {{u.nickname}}
             {% endfor %}
             </span></strong></p>
             {% if post.language != None and post.language != '' and post.language != g.locale %}
