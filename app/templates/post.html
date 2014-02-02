@@ -9,7 +9,7 @@
             {{post.body}}</br></br>
             {% set text = post.body %}
             {% for u in users %}
-            {% set text = replace("@" + u.nickname, "TESTING") %}
+            {#{% set text = replace("@" + u.nickname, "TESTING") %}#}
             {% endfor %}
             {{text}}
             </span></strong></p>
