@@ -11,7 +11,7 @@ from momentjs import momentjs
 app = Flask(__name__)
 app.config.from_object('config')
 
-app.jijnja_env.filters["substitute"] = lambda s: regex_replace(s)
+app.jinja_env.filters["substitute"] = lambda s: regex_replace(s)
 
 
 def regex_replace(text):
