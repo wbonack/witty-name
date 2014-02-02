@@ -210,13 +210,11 @@ def search():
 @app.route('/search_results/<query>')
 @login_required
 def search_results(query):
-    user(query)
+    return redirect(url_for("user", nickname=query))
 #    users = [u.nickname for u in User.query.all()]
 #    for u in users:
 #        if query == users:
-#            return render_template('search_results.html',
-#        query = query,
-#        results = results)
+#            return render_template('search_results.html', query = query, results = results)
 
 @app.route('/translate', methods = ['POST'])
 @login_required
