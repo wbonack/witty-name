@@ -7,7 +7,7 @@
             {% endautoescape %}
             <p><strong><span id="post{{post.id}}">
             {{post.body}}</br></br>
-            {{post.body | substitute}}
+            {#{{post.body | substitute}}#}
             </span></strong></p>
             {% if post.language != None and post.language != '' and post.language != g.locale %}
             <div>
