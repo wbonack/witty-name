@@ -6,13 +6,8 @@
             <p>{{ _('%(nickname)s said %(when)s:', nickname = '<a href="%s">%s</a>' % (url_for('user', nickname = post.author.nickname), post.author.nickname), when = momentjs(post.timestamp).fromNow()) }}</p>
             {% endautoescape %}
             <p><strong><span id="post{{post.id}}">
-            {{post.body}}
-            {#
-            {% from re import findall %}
-            {% for mention in findall(r"(?<=^|(?<=[^a-zA-Z0-9-_\.]))@([A-Za-z]+[A-Za-z0-9]+)", post.body) %}
-                <a href="{{url_for('user', nickname = mention)}}">person</a></br>
-            {% endfor %}
-            #}
+            {{post.body}}</br></br>
+            {{post.body | substitute}}
             </span></strong></p>
             {% if post.language != None and post.language != '' and post.language != g.locale %}
             <div>
