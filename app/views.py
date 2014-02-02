@@ -126,6 +126,7 @@ def user(nickname, page = 1):
     posts = user.posts.paginate(page, POSTS_PER_PAGE, False)
     return render_template('user.html',
         user = user,
+        users = User.query.all(),
         posts = posts)
 
 @app.route('/edit', methods = ['GET', 'POST'])
