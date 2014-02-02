@@ -6,7 +6,6 @@
             <p>{{ _('%(nickname)s said %(when)s:', nickname = '<a href="%s">%s</a>' % (url_for('user', nickname = post.author.nickname), post.author.nickname), when = momentjs(post.timestamp).fromNow()) }}</p>
             {% endautoescape %}
             <p><strong><span id="post{{post.id}}">
-            {{post.body}}</br></br>
             {% set post_body = post.body %}
             {% for u in users %}
                 {% set post_body = post_body | replace("@" + u.nickname, '<a href="%s">@%s</a>' % (url_for('user', nickname = u.nickname), u.nickname)) %}
