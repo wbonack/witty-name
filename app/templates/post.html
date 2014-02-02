@@ -9,10 +9,11 @@
             {{post.body}}</br></br>
             {% set post_body = post.body %}
             {% for u in users %}
-            {% set post_body = post_body | replace("@" + u.nickname, "TESTING") %}
-            {{post_body}}</br>
+                {% set post_body = post_body | replace("@" + u.nickname, "TESTING") %}
+                    {% if loop.last %}
+                        {{post_body}}
+                    {% endif %}
             {% endfor %}
-            {{post_body}}
             </span></strong></p>
             {% if post.language != None and post.language != '' and post.language != g.locale %}
             <div>
