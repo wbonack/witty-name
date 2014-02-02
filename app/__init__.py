@@ -19,7 +19,9 @@ def regex_replace(text):
     from re import findall, sub
     
     for match in findall(r"(?<=^|(?<=[^a-zA-Z0-9-_\.]))@([A-Za-z]+[A-Za-z0-9]+)", text):
-        sub(match, """<a href="{{url_for('user', nickname = {})}}">{}</a>""".format(match.lstrip("@"), match)
+        text = sub(match, """<a href="{{url_for('user', nickname = {})}}">{}</a>""".format(match.lstrip("@"), match))
+    
+    return text
 
 
 db = SQLAlchemy(app)
