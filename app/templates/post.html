@@ -11,7 +11,7 @@
             {% for u in users %}
             {% set post_body = post_body | replace("@" + u.nickname, "TESTING") %}
             {% endfor %}
-            {{text}}
+            {{post_body}}
             </span></strong></p>
             {% if post.language != None and post.language != '' and post.language != g.locale %}
             <div>
