@@ -16,7 +16,7 @@
     {% for u in user.followers %}
     {{u.nickname}}
     {% endfor %}
-    <p>{{ _('Following:') }} {{user.followed.count() - 1}} |
+    || {{ _('Following:') }} {{user.followed.count() - 1}} |
     {% for u in user.followed %}
     {{u.nickname}}
     {% endfor %}
