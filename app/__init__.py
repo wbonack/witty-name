@@ -12,7 +12,7 @@ app = Flask(__name__)
 app.config.from_object('config')
 
 app.jinja_env.filters["substitute"] = lambda s: regex_replace(s)
-app.jinja_env.filters["addlinks"] = addlinks
+app.jinja_env.filters["addlinks"] = lambda s: addlinks(s)
 
 def addlinks(text):
     pass
