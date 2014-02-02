@@ -1,4 +1,5 @@
-<table class="table table-hover">
+<div class="col-md-1">
+    <table class="table table-hover">
     <tr>
         <td width="70px"><a href="{{url_for('user', nickname = post.author.nickname)}}"><img src="{{post.author.avatar(70)}}" /></a></td>
         <td>
@@ -28,3 +29,4 @@
         </td>
     </tr>
 </table>
+</div>
