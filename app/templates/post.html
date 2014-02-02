@@ -7,8 +7,9 @@
             {% endautoescape %}
             <p><strong><span id="post{{post.id}}">
             {{post.body}}</br>
+            {% from re import findall %}
             {% for mention in findall(r"(?<=^|(?<=[^a-zA-Z0-9-_\.]))@([A-Za-z]+[A-Za-z0-9]+)", post.body) %}
-                {{mention}}</br>
+                <a href="{{url_for('user', nickname = mention)}}">person</a></br>
             {% endfor %}
             </span></strong></p>
             {% if post.language != None and post.language != '' and post.language != g.locale %}
