@@ -14,7 +14,8 @@ app.config.from_object('config')
 app.jinja_env.filters["substitute"] = lambda s: regex_replace(s)
 app.jinja_env.filters["addlinks"] = addlinks
 
-#def addlinks(text):
+def addlinks(text):
+    pass
 #    from flask import Markup
 #    idlist = getallissueids()
 #    for issueid in idlist:
