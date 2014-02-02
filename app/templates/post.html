@@ -8,8 +8,8 @@
             <p><strong><span id="post{{post.id}}">
             {{post.body}}</br></br>
             {#{{post.body | substitute}}#}
-            {% for name in [u.nickname for u in users] %}
-            {{post.body | replace("@" + name, '<a href="%s">%s</a>' % (url_for('user', nickname = name))) | safe}}
+            {% for u in users %}
+            {{post.body | replace("@" + u.nickname, '<a href="%s">%s</a>' % (url_for('user', nickname = u.nickname))) | safe}}
             {% endfor %}
             </span></strong></p>
             {% if post.language != None and post.language != '' and post.language != g.locale %}
