@@ -68,6 +68,7 @@ def index(page = 1):
     return render_template('index.html',
         title = 'Home',
         form = form,
+        users = User.query.all(),
         posts = posts)
 
 @app.route('/login', methods = ['GET', 'POST'])

@@ -10,6 +10,27 @@ from momentjs import momentjs
 
 app = Flask(__name__)
 app.config.from_object('config')
+
+app.jinja_env.filters["substitute"] = lambda s: regex_replace(s)
+app.jinja_env.filters["addlinks"] = addlinks
+
+def addlinks(text):
+    from flask import Markup
+    idlist = getallissueids()
+    for issueid in idlist:
+        text = text.replace( issueid, "<a href=/browse/" + issueid +">" + issueid + "</a>")
+    return Markup(text)
+
+def regex_replace(text):
+    
+    from re import findall, sub
+    
+    for match in findall(r"(?<=^|(?<=[^a-zA-Z0-9-_\.]))@([A-Za-z]+[A-Za-z0-9]+)", text):
+        text = sub(match, """<a href="{{url_for('user', nickname = {})}}">{}</a>""".format(match.lstrip("@"), match))
+    
+    return text
+
+
 db = SQLAlchemy(app)
 lm = LoginManager()
 lm.init_app(app)
