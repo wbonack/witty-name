@@ -210,10 +210,13 @@ def search():
 @app.route('/search_results/<query>')
 @login_required
 def search_results(query):
-    results = Post.query.whoosh_search(query, MAX_SEARCH_RESULTS).all()
-    return render_template('search_results.html',
-        query = query,
-        results = results)
+    user(query)
+#    users = [u.nickname for u in User.query.all()]
+#    for u in users:
+#        if query == users:
+#            return render_template('search_results.html',
+#        query = query,
+#        results = results)
 
 @app.route('/translate', methods = ['POST'])
 @login_required
