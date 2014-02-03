@@ -16,20 +16,20 @@
         <a href="{{url_for('unfollow', nickname = user.nickname)}}">{{ _('Unfollow') }}</a>
     {% endif %}
     {% if user.about_me %}<p>{{user.about_me}}</p>{% endif %}
+</div>
+<div class="col-md-1 backborder" style="height: 200px;">    
     {% if user.last_seen %}
-    </br></br></br>
     <p><em>{{ _('Last seen:') }} {{ momentjs(user.last_seen).calendar() }}</em></p>
     {% endif %}
-    <p>{{ _('Followers:') }} {{user.followers.count() - 1}} |
+    <p><strong>{{ _('Followers:') }}</strong> {{user.followers.count() - 1}} <strong>|</strong>
     {% for u in user.followers %}
     {{u.nickname}}
     {% endfor %}
-    || {{ _('Following:') }} {{user.followed.count() - 1}} |
+    <strong>{{ _('Following:') }}</strong> {{user.followed.count() - 1}} <strong>|</strong>
     {% for u in user.followed %}
     {{u.nickname}}
     {% endfor %}
     </p>
-</div>
 <div class="col-md-2 backborder">
 {% for post in posts.items %}
     {% include 'post.html' %}
