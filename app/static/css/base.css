@@ -36,7 +36,7 @@ body {
 
 .col-md-3{
 	padding: 10px;
-	float: none;
+	float: left;
 	width: auto;
 }
 
