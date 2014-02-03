@@ -3,6 +3,7 @@
 
 {% block content %}
 {% include 'flash.html' %}
+<div class="row">
 <div class="col-md-1 backborder" style="height: 180px;">
     <div class="pull-right">
         <img src="{{user.avatar(128)}}" class="img-polaroid">
@@ -30,6 +31,7 @@
     {{u.nickname}}
     {% endfor %}
     </p>
+</div>
 </div>
 <div class="col-md-2 backborder">
 {% for post in posts.items %}

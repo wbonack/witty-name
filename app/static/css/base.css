@@ -20,16 +20,19 @@ body {
 	width: 860px;
 }
 .col-md-1{
+	padding: 10px;
 	float: left;
 	width: 300px;
 }
 
 .col-md-2{
+	padding: 10px;
 	float: left;
 	width: 500px;
 }
 
 .col-md-3{
+	padding: 10px;
 	float: none;
 	width: 500px;
 }
