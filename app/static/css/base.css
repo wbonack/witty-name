@@ -37,7 +37,7 @@ body {
 .col-md-3{
 	padding: 10px;
 	float: none;
-	width: 500px;
+	width: auto;
 }
 
 a:link {color:#009900;}
