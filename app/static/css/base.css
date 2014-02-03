@@ -4,7 +4,6 @@ body {
 }
 
 .backborder{
-	background-color: transparent;
 	padding: 10px;
 	background-color:rgba(255,255,255,0.5);
 	border-radius:10px;
@@ -29,7 +28,7 @@ body {
 }
 
 
-a:link {color:#CCFF33;}
-a:visited {color:#CCFF33;}
-a:hover {color:#CCFF33;}
-a:active {color:#CCFF33;}
+a:link {color:#009900;}
+a:visited {color:#009900;}
+a:hover {color:#009900;}
+a:active {color:#009900;}
