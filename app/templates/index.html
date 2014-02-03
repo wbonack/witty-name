@@ -2,7 +2,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ _('Hi, %(nickname)s!', nickname = g.user.nickname) }}</h1>
+<h1 style="text-align:center">{{ _('Hi, %(nickname)s!', nickname = g.user.nickname) }}</h1>
 {% include 'flash.html' %}
 <div class="well">
     <form class="form-horizontal" action="" method="post" name="post">
