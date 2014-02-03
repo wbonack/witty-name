@@ -3,7 +3,7 @@
 
 {% block content %}
 {% include 'flash.html' %}
-<div class="col-md-1 backborder" style="height: 200px;">
+<div class="col-md-1 backborder" style="height: 180px;">
     <div class="pull-right">
         <img src="{{user.avatar(128)}}" class="img-polaroid">
     </div>
@@ -17,7 +17,7 @@
     {% endif %}
     {% if user.about_me %}<p>{{user.about_me}}</p>{% endif %}
 </div>
-<div class="col-md-1 backborder" style="height: 200px;">    
+<div class="col-md-1 backborder" style="height: 180px;">    
     {% if user.last_seen %}
     <p><em>{{ _('Last seen:') }} {{ momentjs(user.last_seen).calendar() }}</em></p>
     {% endif %}
@@ -30,6 +30,7 @@
     {{u.nickname}}
     {% endfor %}
     </p>
+</div>
 <div class="col-md-2 backborder">
 {% for post in posts.items %}
     {% include 'post.html' %}
