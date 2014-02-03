@@ -42,6 +42,7 @@ body {
 	padding: 10px;
 	float: none;
 	width: auto;
+	overlap: auto;
 }
 
 a:link {color:#009900;}
