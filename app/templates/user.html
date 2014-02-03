@@ -22,13 +22,13 @@
     {% if user.last_seen %}
     <p><em>{{ _('Last seen:') }} {{ momentjs(user.last_seen).calendar() }}</em></p>
     {% endif %}
-    <p><strong>{{ _('Followers:') }}</strong> {{user.followers.count() - 1}} <strong>|</strong>
+    <p><strong>{{ _('Followers:') }}</strong> {{user.followers.count() - 1}}
     </br>
     {% for u in user.followers %}
     {{u.nickname}}
     {% endfor %}
     </br>
-    <strong>{{ _('Following:') }}</strong> {{user.followed.count() - 1}} <strong>|</strong>
+    <strong>{{ _('Following:') }}</strong> {{user.followed.count() - 1}}
     </br>
     {% for u in user.followed %}
     {{u.nickname}}
