@@ -48,5 +48,5 @@ MS_TRANSLATOR_CLIENT_SECRET = '' # enter your MS translator app secret here
 ADMINS = ['you@example.com']
 
 # pagination
-POSTS_PER_PAGE = 50
+POSTS_PER_PAGE = 10
 MAX_SEARCH_RESULTS = 50
