@@ -27,6 +27,10 @@ body {
 	width: 500px;
 }
 
+.col-md-3{
+	float: none;
+	width: 500px;
+}
 
 a:link {color:#009900;}
 a:visited {color:#009900;}
