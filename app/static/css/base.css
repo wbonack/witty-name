@@ -42,7 +42,8 @@ body {
 	padding: 10px;
 	float: none;
 	width: auto;
-	overlap: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 a:link {color:#009900;}
