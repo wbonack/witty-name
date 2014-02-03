@@ -1,7 +1,8 @@
 body {
 	background-color: transparent;
 	background-image: url('/static/img/bg.png');
-	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-attachment:fixed;
 }
 
 
@@ -13,7 +14,6 @@ body {
 }
 
 .text-primary{
-
 	color: #5F9F09;
 }
 
@@ -22,13 +22,24 @@ body {
 	width: 860px;
 }
 .col-md-1{
+	padding: 10px;
 	float: left;
 	width: 300px;
 }
 
 .col-md-2{
+	padding: 10px;
 	float: left;
 	width: 500px;
 }
 
+.col-md-3{
+	padding: 10px;
+	float: none;
+	width: 500px;
+}
 
+a:link {color:#009900;}
+a:visited {color:#009900;}
+a:hover {color:#009900;}
+a:active {color:#009900;}

@@ -3,15 +3,12 @@
 
 {% block content %}
 {% include 'flash.html' %}
-<div class="col-md-1 backborder" style="height: 140px;">
+<div class="row">
+<div class="col-md-1 backborder" style="height: 180px;">
     <div class="pull-right">
         <img src="{{user.avatar(128)}}" class="img-polaroid">
     </div>
-    <h1>{{user.nickname}}</h1>
-    {% if user.about_me %}<p>{{user.about_me}}</p>{% endif %}
-    {% if user.last_seen %}
-    <p><em>{{ _('Last seen:') }} {{ momentjs(user.last_seen).calendar() }}</em></p>
-    {% endif %}
+    <h3>{{user.nickname}}</h3>
     {% if user.id == g.user.id %}
         <a href="{{url_for('edit')}}">{{ _('Edit your profile') }}</a>
     {% elif not g.user.is_following(user) %}
@@ -19,19 +16,25 @@
     {% else %}
         <a href="{{url_for('unfollow', nickname = user.nickname)}}">{{ _('Unfollow') }}</a>
     {% endif %}
-    <p>{{ _('Followers:') }} {{user.followers.count() - 1}} |
+    {% if user.about_me %}<p>{{user.about_me}}</p>{% endif %}
+</div>
+<div class="col-md-1 backborder" style="height: 180px;">    
+    {% if user.last_seen %}
+    <p><em>{{ _('Last seen:') }} {{ momentjs(user.last_seen).calendar() }}</em></p>
+    {% endif %}
+    <p><strong>{{ _('Followers:') }}</strong> {{user.followers.count() - 1}} <strong>|</strong>
     {% for u in user.followers %}
     {{u.nickname}}
     {% endfor %}
-    || {{ _('Following:') }} {{user.followed.count() - 1}} |
+    <strong>{{ _('Following:') }}</strong> {{user.followed.count() - 1}} <strong>|</strong>
     {% for u in user.followed %}
     {{u.nickname}}
     {% endfor %}
     </p>
 </div>
+</div>
 <div class="col-md-2 backborder">
 {% for post in posts.items %}
-
     {% include 'post.html' %}
 {% endfor %}
 </div>

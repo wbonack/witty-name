@@ -23,9 +23,11 @@
         </div>
     </form>
 </div>
+<div class="col-md-3 backborder">
 {% for post in posts.items %}
     {% include 'post.html' %}
 {% endfor %}
+</div>
 <ul class="pager">
     {% if posts.has_prev %}
     <li class="previous"><a href="{{ url_for('index', page = posts.prev_num) }}">{{ _('Newer posts') }}</a></li>
