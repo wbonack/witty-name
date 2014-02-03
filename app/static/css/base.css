@@ -8,7 +8,7 @@ body {
 .well{
 
 	background-color:rgba(255,255,255,0.5);
-	width: 450px;
+	width: 500px;
 	margin-left: auto;
 	margin-right: auto;
 	
@@ -27,6 +27,8 @@ body {
 
 .span12{
 	width: 860px;
+	margin-right:auto;
+	margin-left:auto;
 }
 .col-md-1{
 	padding: 10px;
