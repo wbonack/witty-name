@@ -40,7 +40,7 @@ body {
 
 .col-md-3{
 	padding: 10px;
-	float: left;
+	float: none;
 	width: auto;
 }
 
