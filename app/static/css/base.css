@@ -5,6 +5,8 @@ body {
 	background-attachment:fixed;
 }
 
+
+
 .backborder{
 	padding: 10px;
 	background-color:rgba(255,255,255,0.5);
@@ -23,6 +25,7 @@ body {
 	padding: 10px;
 	float: left;
 	width: 300px;
+	margin: 15px;
 }
 
 .col-md-2{
@@ -34,7 +37,7 @@ body {
 .col-md-3{
 	padding: 10px;
 	float: none;
-	width: 500px;
+	width: auto;
 }
 
 a:link {color:#009900;}
