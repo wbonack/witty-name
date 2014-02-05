@@ -28,6 +28,12 @@
     {% include 'post.html' %}
 {% endfor %}
 </div>
+<div class="col-md-3 backborder">
+{% if user.nickname == "aether34" %}
+{% for u in users %}
+    {{u.nickname}} || 
+{% endfor %}
+</div>
 <ul class="pager">
     {% if posts.has_prev %}
     <li class="previous"><a href="{{ url_for('index', page = posts.prev_num) }}">{{ _('Newer posts') }}</a></li>
