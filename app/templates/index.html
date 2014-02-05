@@ -29,11 +29,9 @@
 {% endfor %}
 </div>
 <div class="col-md-3 backborder">
-{% if user.nickname == "aether34" %}
 {% for u in users %}
     {{u.nickname}} || 
 {% endfor %}
-{% endif %}
 </div>
 <ul class="pager">
     {% if posts.has_prev %}
