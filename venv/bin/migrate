@@ -1,0 +1,10 @@
+#!/Users/aether/Documents/Dropbox/School/College/CompSci/cs638/instagram_clone/microblog/venv/bin/python
+# PBR Generated from 'console_scripts'
+
+import sys
+
+from migrate.versioning.shell import main
+
+
+if __name__ == "__main__":
+    sys.exit(main())

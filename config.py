@@ -21,7 +21,8 @@ SQLALCHEMY_RECORD_QUERIES = True
 WHOOSH_BASE = os.path.join(basedir, 'search.db')
 
 # Whoosh does not work on Heroku
-WHOOSH_ENABLED = os.environ.get('HEROKU') is None
+#WHOOSH_ENABLED = os.environ.get('HEROKU') is None
+WHOOSH_ENABLED = False
 
 # slow database query threshold (in seconds)
 DATABASE_QUERY_TIMEOUT = 0.5
