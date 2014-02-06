@@ -90,5 +90,6 @@ class Post(db.Model):
         return '<Post %r>' % (self.body)
         
 if WHOOSH_ENABLED:
-    import flask.ext.whooshalchemy as whooshalchemy
-    whooshalchemy.whoosh_index(app, Post)
+    pass
+    #import flask.ext.whooshalchemy as whooshalchemy
+    #whooshalchemy.whoosh_index(app, Post)

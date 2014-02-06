@@ -7,6 +7,7 @@ from forms import LoginForm, EditForm, PostForm, SearchForm
 from models import User, ROLE_USER, ROLE_ADMIN, Post
 from datetime import datetime
 from emails import follower_notification
+from guess_language import guessLanguage
 from translate import microsoft_translate
 from config import POSTS_PER_PAGE, MAX_SEARCH_RESULTS, LANGUAGES, DATABASE_QUERY_TIMEOUT, WHOOSH_ENABLED
 
@@ -52,7 +53,7 @@ def internal_error(error):
 def index(page = 1):
     form = PostForm()
     if form.validate_on_submit():
-        language = 'UNKNOWN'
+        language = guessLanguage(form.post.data)
         if language == 'UNKNOWN' or len(language) > 5:
             language = ''
         post = Post(body = form.post.data,
